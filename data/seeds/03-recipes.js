@@ -9,7 +9,7 @@ exports.seed = function (knex) {
           ingredients: "egg,water",
           instructions: "boil egg in water for 12 minutes, remove and let cool",
           category: "Snack",
-          id: 1
+          creator_id: 1
         },
         {
           title: "Scrambled Eggs",
@@ -17,7 +17,7 @@ exports.seed = function (knex) {
           ingredients: "egg,oil,salt,pepper",
           instructions: "heat frying pan on medium with desired oil, crack 2-3 eggs onto surface, salt, let cook for 3-4 mins, scramble!",
           category: "Breakfast",
-          id: 2
+          creator_id: 2
         },
         {
           title: "Hot Tea",
@@ -25,7 +25,7 @@ exports.seed = function (knex) {
           ingredients: "Water, Tea",
           instructions: "Put tea bag in hot water",
           category: "Breakfast",
-          id: 2
+          creator_id: 2
         }
       ]);
     });

@@ -21,7 +21,8 @@ Deployed on HEROKU APP: https://secret-family-recipes2021.herokuapp.com/
 RECIPES
 
 **   (GET) /api/auth/recipes (get all recipes)
-**   (GET) /api/auth/recipes/:id (get by id) 
-**   (POST) /api/auth/recipes (add recipe)
+**   (GET) /api/auth/recipes/:id (get by id)  
+**   (POST) /api/auth/recipes (add recipe)  
+**   (PUT) /api/auth/recipes:id (edit recipe)  
 **   (DELETE) /api/auth/recipes/:id (delete recipe by id)
 

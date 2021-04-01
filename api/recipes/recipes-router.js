@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
 //add
 router.post('/', async (req, res) => {
   try {
-      req.body.user_id = req.session.user.user_id //change user_id in recipes table? // getting error /// 
+      req.body.creator_id = req.session.user.user_id //changed to creator_id
       const data = await Recipes.insert(req.body);
       res.json(data);
   } catch (err) {
