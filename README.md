@@ -5,3 +5,23 @@ The little cards my grandma wrote the recipes on in her beautiful cursive are ge
 
 * Unit 3 - Jonathan Calderon, Nicholas Samples
 * Unit 4 - Francis Bonacic
+
+
+
+
+///END POINTS /// 
+
+Deployed on HEROKU APP: https://secret-family-recipes2021.herokuapp.com/
+
+////USERS
+
+**   (POST) /api/auth/register (sign-up)
+**   (POST) /api/auth/login    (log-in)
+
+RECIPES
+
+**   (GET) /api/auth/recipes (get all recipes)
+**   (GET) /api/auth/recipes/:id (get by id) 
+**   (POST) /api/auth/recipes (add recipe)
+**   (DELETE) /api/auth/recipes/:id (delete recipe by id)
+

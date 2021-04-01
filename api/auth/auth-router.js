@@ -31,7 +31,6 @@ router.post(
   );
 
 
-
 router.post(
     "/login", checkValidBody, async (req, res, next) => { 
         const { username, password } = req.body;
@@ -49,6 +48,21 @@ router.post(
         }
     }
 );
+
+
+router.get('/logout', (req, res) => {
+  if (req.session) {
+      req.session.destroy(err => { 
+          if (err) {
+              res.json('you have not been logged out properly');
+          } else res.json('GoodBye');
+      })
+  } else {
+      res.json('there was no session');
+  }
+})
+
+
 
 router.use((err, req, res) => {
     res.status(500).json({
