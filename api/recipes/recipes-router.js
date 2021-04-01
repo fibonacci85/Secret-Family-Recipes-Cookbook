@@ -39,6 +39,19 @@ router.post('/', async (req, res) => {
   }
 });
 
+//update
+router.put('/:id', async (req, res) => {
+  try {
+      const body = req.body;
+      const { id } = req.params;
+      const data = await Recipes.update(id, body);
+      res.json(data);
+  } catch (err) {
+      res.json({ message: err.message });
+  }
+})
+
+
 //delete
 router.delete('/:id', async(req, res) => {
   try {

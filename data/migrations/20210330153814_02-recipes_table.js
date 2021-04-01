@@ -3,13 +3,13 @@ exports.up = async function(knex) {
   await knex.schema
   .createTable("recipes", (recipes) => {
       recipes.increments("recipe_id")
-      recipes.string("recipe_title")
-      recipes.string("recipe_source")
-      recipes.string("recipe_ingredients")
-      recipes.string("recipe_instructions")
-      recipes.string("recipe_category")
+      recipes.string("title")
+      recipes.string("source")
+      recipes.string("ingredients")
+      recipes.string("instructions")
+      recipes.string("category")
       recipes
-            .integer("user_id")
+            .integer("id")
             .unsigned()
             .notNullable()
             .references("user_id")
