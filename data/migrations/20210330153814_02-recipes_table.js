@@ -8,14 +8,6 @@ exports.up = async function(knex) {
       recipes.string("ingredients")
       recipes.string("instructions")
       recipes.string("category")
-      recipes
-            .integer("creator_id")
-            .unsigned()
-            .notNullable()
-            .references("user_id")
-            .inTable("users")
-            .onDelete("CASCADE")
-            .onUpdate("CASCADE")
   })
 };
 
