@@ -1,8 +1,5 @@
 const express = require('express')
 const router = express.Router();
-// const { mw } = require("./recipes-middleware");
-// const { restricted } = require("../auth/auth-middleware");
-// const Recipe = require("./recipes-model");
 const Recipes = require('./recipes-model')
 
 // Endpoints
@@ -31,7 +28,7 @@ router.get('/:id', async (req, res) => {
 //add
 router.post('/', async (req, res) => {
   try {
-      req.body.creator_id = req.session.user.user_id //changed to creator_id
+      // req.body.creator_id = req.body.users.user_id
       const data = await Recipes.insert(req.body);
       res.json(data);
   } catch (err) {
