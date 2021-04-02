@@ -14,7 +14,7 @@ router.get("/", (req, res) => { // add restricted
 //add user
 router.post('/', async (req, res) => {
     try {
-        req.body.user_id = req.session.user.user_id //need to differentiate user_id's ??
+        req.body.user_id = req.session.user.user_id 
         const data = await Users.insert(req.body);
         res.json(data);
     } catch (err) {
