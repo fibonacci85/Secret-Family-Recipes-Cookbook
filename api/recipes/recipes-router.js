@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
   try {
       // req.body.creator_id = req.body.users.user_id
       const data = await Recipes.insert(req.body);
-      res.json(data);
+      res.json({message: "recipe submitted!"});
   } catch (err) {
       res.json({ message: err.message });
   }
